@@ -1,0 +1,711 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                              ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o (__mulsi3)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o (exit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o (__do_copy_data)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              RobotArm_Uart_02.o (__do_clear_bss)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                              ../../RobotArmLib/RobotArmBase/RobotArmUart.o (itoa)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o) (strrev)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o) (__udivmodhi4)
+
+Allocating common symbols
+Common symbol       size              file
+
+Start_Position      0xe               RobotArm_Uart_02.o
+bytesToReceive      0x1               RobotArm_Uart_02.o
+feeler_timer        0x1               ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+adcExt              0x2               ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+uart_status         0x1               ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+adcUBat             0x2               ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+uart_receive_bytes  0x1               ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+Current_4           0x2               RobotArm_Uart_02.o
+BeepSound           0x2               ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+buffer_pos          0x1               ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+Current_1           0x2               RobotArm_Uart_02.o
+Current_2           0x2               RobotArm_Uart_02.o
+Current_6           0x2               RobotArm_Uart_02.o
+stopwatches         0x11              ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+Current_3           0x2               RobotArm_Uart_02.o
+speed               0x2               RobotArm_Uart_02.o
+delay_timer         0x2               ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+ms_timer            0x1               ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+receiveBuffer       0x3               RobotArm_Uart_02.o
+uart_receive_buffer
+                    0x10              ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+Current_5           0x2               RobotArm_Uart_02.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+LOAD RobotArm_Uart_02.o
+LOAD ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+LOAD ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x1f9a
+ *(.vectors)
+ .vectors       0x00000000       0x8c c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x0000008c      0x17c RobotArm_Uart_02.o
+ .progmem.data  0x00000208       0xf8 ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                0x00000300                . = ALIGN (0x2)
+                0x00000300                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000300        0x0 linker stubs
+ *(.trampolines*)
+                0x00000300                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000300                __ctors_start = .
+ *(.ctors)
+                0x00000300                __ctors_end = .
+                0x00000300                __dtors_start = .
+ *(.dtors)
+                0x00000300                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000300        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+                0x00000300                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000300        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000030c       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x0000030c                __do_copy_data
+ .init4         0x00000322       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000322                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000332        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+ *(.init9)
+ *(.text)
+ .text          0x0000033a        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+                0x0000033a                __vector_22
+                0x0000033a                __vector_28
+                0x0000033a                __vector_1
+                0x0000033a                __vector_32
+                0x0000033a                __vector_34
+                0x0000033a                __vector_24
+                0x0000033a                __vector_12
+                0x0000033a                __bad_interrupt
+                0x0000033a                __vector_6
+                0x0000033a                __vector_31
+                0x0000033a                __vector_3
+                0x0000033a                __vector_23
+                0x0000033a                __vector_25
+                0x0000033a                __vector_11
+                0x0000033a                __vector_13
+                0x0000033a                __vector_17
+                0x0000033a                __vector_19
+                0x0000033a                __vector_7
+                0x0000033a                __vector_27
+                0x0000033a                __vector_5
+                0x0000033a                __vector_33
+                0x0000033a                __vector_4
+                0x0000033a                __vector_2
+                0x0000033a                __vector_21
+                0x0000033a                __vector_15
+                0x0000033a                __vector_29
+                0x0000033a                __vector_8
+                0x0000033a                __vector_26
+                0x0000033a                __vector_14
+                0x0000033a                __vector_10
+                0x0000033a                __vector_16
+                0x0000033a                __vector_18
+                0x0000033a                __vector_20
+ .text          0x0000033e      0x438 RobotArm_Uart_02.o
+                0x000006f6                Leds_Beeper
+                0x0000033e                askAQuestion
+                0x00000740                main
+ .text          0x00000776     0x1534 ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                0x00001532                Servo_Power_And_Start
+                0x000008a6                mSleep
+                0x00000948                PowerLEDred
+                0x00000d2e                task_ADC_average
+                0x00001208                Read_Values_EE
+                0x00001aea                check_board
+                0x000008de                setLED1
+                0x000008ca                setLEDs
+                0x000017f2                Move
+                0x000010ae                Power_Off_Servos
+                0x00001008                readINTEE
+                0x00000e8c                task_ADC_channel
+                0x000009ac                scan_keyboard
+                0x0000088a                sleep
+                0x0000095a                PowerLEDgreen
+                0x00001018                write_Values_EE
+                0x00000f54                sampleADCs_and_sleep
+                0x000010ca                Start_position
+                0x0000092e                setLED4
+                0x00000bfa                readADC
+                0x000013e2                Default_Start_position
+                0x00000c42                init_adc
+                0x000009a8                changeBeepsound
+                0x000009a2                clearBeepsound
+                0x00000fcc                calc_current
+                0x00000776                __vector_9
+                0x00001092                Power_Servos
+                0x00001508                Servo_PWM_Zero
+                0x0000097e                PowerLEDoff
+                0x00000c4c                startADC
+                0x0000096c                PowerLEDorange
+                0x00000990                setBeepsound
+                0x00000914                setLED3
+                0x00001b02                initRobotBase
+                0x00001890                s_Move
+                0x0000169e                Servo_Power_And_Start_Default
+                0x00000ff6                writeINTEE
+                0x00000f90                sampleADCs_average_and_sleep
+                0x000008fa                setLED2
+                0x00000c56                task_ADC
+ .text          0x00001caa      0x224 ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+                0x00001cba                writeString
+                0x00001d16                __vector_30
+                0x00001e4a                writeIntegerLength
+                0x00001d8a                waitUntilReceptionComplete
+                0x00001e06                writeInteger
+                0x00001dbe                stopReception
+                0x00001d7c                receiveBytes
+                0x00001caa                writeChar
+                0x00001cf2                writeStringLength
+                0x00001cd4                writeNStringP
+                0x00001d94                copyReceivedBytesToBuffer
+                0x00001dca                receiveBytesToBuffer
+ .text          0x00001ece        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .text          0x00001ece        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00001ece        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text          0x00001ece        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00001ece        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .text          0x00001ece        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .text          0x00001ece        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00001ece                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x00001ece       0x3e c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                0x00001ece                __mulsi3
+ .text.libgcc   0x00001f0c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00001f0c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00001f0c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x00001f0c       0x42 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                0x00001f0c                itoa
+ .text.avr-libc
+                0x00001f4e       0x20 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                0x00001f4e                strrev
+ .text.libgcc   0x00001f6e       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00001f6e                __udivmodhi4
+                0x00001f96                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00001f96        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00001f96                exit
+                0x00001f96                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00001f96        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00001f9a                _etext = .
+
+.data           0x00800100        0x2 load address 0x00001f9a
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+ .data          0x00800100        0x0 RobotArm_Uart_02.o
+ .data          0x00800100        0x1 ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                0x00800100                current_adc_channel
+ .data          0x00800101        0x0 ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+ .data          0x00800101        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .data          0x00800101        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800101        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x00800101        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00800101        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .data          0x00800101        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .data          0x00800101        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800102                . = ALIGN (0x2)
+ *fill*         0x00800101        0x1 00
+                0x00800102                _edata = .
+                0x00800102                PROVIDE (__data_end, .)
+
+.bss            0x00800102       0x4f
+                0x00800102                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800102        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+ .bss           0x00800102        0x0 RobotArm_Uart_02.o
+ .bss           0x00800102        0x1 ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                0x00800102                robot_arm_v3
+ .bss           0x00800103        0x0 ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+ .bss           0x00800103        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .bss           0x00800103        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800103        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00800103        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00800103        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .bss           0x00800103        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .bss           0x00800103        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x00800103       0x20 RobotArm_Uart_02.o
+                0x00800103                Start_Position
+                0x00800111                bytesToReceive
+                0x00800112                Current_4
+                0x00800114                Current_1
+                0x00800116                Current_2
+                0x00800118                Current_6
+                0x0080011a                Current_3
+                0x0080011c                speed
+                0x0080011e                receiveBuffer
+                0x00800121                Current_5
+ COMMON         0x00800123       0x1b ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                0x00800123                feeler_timer
+                0x00800124                adcExt
+                0x00800126                adcUBat
+                0x00800128                BeepSound
+                0x0080012a                stopwatches
+                0x0080013b                delay_timer
+                0x0080013d                ms_timer
+ COMMON         0x0080013e       0x13 ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+                0x0080013e                uart_status
+                0x0080013f                uart_receive_bytes
+                0x00800140                buffer_pos
+                0x00800141                uart_receive_buffer
+                0x00800151                PROVIDE (__bss_end, .)
+                0x00001f9a                __data_load_start = LOADADDR (.data)
+                0x00001f9c                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800151        0x0
+                0x00800151                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800151                PROVIDE (__noinit_end, .)
+                0x00800151                _end = .
+                0x00800151                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x60
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 RobotArm_Uart_02.o
+ .debug_aranges
+                0x00000020       0x20 ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+ .debug_aranges
+                0x00000040       0x20 ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+
+.debug_pubnames
+                0x00000000      0x5e2
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0xd2 RobotArm_Uart_02.o
+ .debug_pubnames
+                0x000000d2      0x3b9 ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+ .debug_pubnames
+                0x0000048b      0x157 ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+
+.debug_info     0x00000000     0x1ad3
+ *(.debug_info)
+ .debug_info    0x00000000      0x35c RobotArm_Uart_02.o
+ .debug_info    0x0000035c     0x1311 ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+ .debug_info    0x0000166d      0x466 ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x5b2
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0xcb RobotArm_Uart_02.o
+ .debug_abbrev  0x000000cb      0x2f3 ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+ .debug_abbrev  0x000003be      0x1f4 ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+
+.debug_line     0x00000000     0x1a76
+ *(.debug_line)
+ .debug_line    0x00000000      0x3dc RobotArm_Uart_02.o
+ .debug_line    0x000003dc     0x1393 ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+ .debug_line    0x0000176f      0x307 ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+
+.debug_frame    0x00000000      0x3a0
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x40 RobotArm_Uart_02.o
+ .debug_frame   0x00000040      0x290 ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+ .debug_frame   0x000002d0       0xd0 ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+
+.debug_str      0x00000000      0x673
+ *(.debug_str)
+ .debug_str     0x00000000      0x17f RobotArm_Uart_02.o
+                                0x1b8 (size before relaxing)
+ .debug_str     0x0000017f      0x377 ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                0x513 (size before relaxing)
+ .debug_str     0x000004f6      0x17d ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+                                0x2b3 (size before relaxing)
+
+.debug_loc      0x00000000      0x90c
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x774 ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+ .debug_loc     0x00000774      0x198 ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(RobotArm_Uart_02.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000       0x90
+ .debug_ranges  0x00000000       0x48 ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+ .debug_ranges  0x00000048       0x48 ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+
+Cross Reference Table
+
+Symbol                                            File
+BeepSound                                         ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+Current_1                                         ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+Current_2                                         ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+Current_3                                         ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+Current_4                                         ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+Current_5                                         ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+Current_6                                         ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+Default_Start_position                            ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+Leds_Beeper                                       RobotArm_Uart_02.o
+Move                                              ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+PowerLEDgreen                                     ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+PowerLEDoff                                       ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+PowerLEDorange                                    ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+PowerLEDred                                       ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+Power_Off_Servos                                  ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+Power_Servos                                      ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+Read_Values_EE                                    ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+Servo_PWM_Zero                                    ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+Servo_Power_And_Start                             ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+Servo_Power_And_Start_Default                     ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+Start_Position                                    ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+Start_position                                    ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+__bad_interrupt                                   c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__bss_end                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+__bss_start                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+__data_end                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+__data_load_start                                 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+__data_start                                      c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+__do_clear_bss                                    c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                                                  ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+                                                  ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+__do_copy_data                                    c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                                                  ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+__heap_end                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__init                                            c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__mulsi3                                          c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                                                  ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+__stack                                           c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__udivmodhi4                                      c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+__vector_1                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_10                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_11                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_12                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_13                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_14                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_15                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_16                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_17                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_18                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_19                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_2                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_20                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_21                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_22                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_23                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_24                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_25                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_26                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_27                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_28                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_29                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_3                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_30                                       ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_31                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_32                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_33                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_34                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_4                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_5                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_6                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_7                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_8                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_9                                        ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vector_default                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+__vectors                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+_exit                                             c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+adcExt                                            ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+adcUBat                                           ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+askAQuestion                                      RobotArm_Uart_02.o
+buffer_pos                                        ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+bytesToReceive                                    RobotArm_Uart_02.o
+calc_current                                      ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+changeBeepsound                                   ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+check_board                                       ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+clearBeepsound                                    ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+copyReceivedBytesToBuffer                         ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+                                                  RobotArm_Uart_02.o
+current_adc_channel                               ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+delay_timer                                       ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+exit                                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+feeler_timer                                      ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+initRobotBase                                     ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+init_adc                                          ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+itoa                                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                                                  ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+mSleep                                            ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+main                                              RobotArm_Uart_02.o
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm64.o
+ms_timer                                          ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+readADC                                           ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+readINTEE                                         ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+receiveBuffer                                     RobotArm_Uart_02.o
+receiveBytes                                      ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+                                                  RobotArm_Uart_02.o
+receiveBytesToBuffer                              ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+robot_arm_v3                                      ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+s_Move                                            ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+sampleADCs_and_sleep                              ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+sampleADCs_average_and_sleep                      ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+scan_keyboard                                     ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+setBeepsound                                      ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+setLED1                                           ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+setLED2                                           ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+setLED3                                           ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+setLED4                                           ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+setLEDs                                           ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+sleep                                             ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+speed                                             RobotArm_Uart_02.o
+startADC                                          ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+stopReception                                     ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+stopwatches                                       ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+strrev                                            c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+task_ADC                                          ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+task_ADC_average                                  ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+task_ADC_channel                                  ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+uart_receive_buffer                               ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+uart_receive_bytes                                ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+uart_status                                       ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+waitUntilReceptionComplete                        ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+writeChar                                         ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+writeINTEE                                        ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+writeInteger                                      ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+writeIntegerLength                                ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+writeNStringP                                     ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+                                                  ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o
+                                                  RobotArm_Uart_02.o
+writeString                                       ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+writeStringLength                                 ../../RobotArmLib/RobotArmBase/RobotArmUart.o
+write_Values_EE                                   ../../RobotArmLib/RobotArmBase/RobotArmBaseLib.o

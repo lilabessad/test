@@ -1,0 +1,650 @@
+   1               		.file	"RobotArm_Uart_02.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	askAQuestion
+  18               	askAQuestion:
+  19               	.LFB7:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 81E0      		ldi r24,lo8(1)
+  25 0002 0E94 0000 		call receiveBytes
+  26               	.LM3:
+  27 0006 8AE0      		ldi r24,lo8(10)
+  28 0008 90E0      		ldi r25,hi8(10)
+  29 000a 0E94 0000 		call mSleep
+  30               	.LM4:
+  31 000e 80E0      		ldi r24,lo8(receiveBuffer)
+  32 0010 90E0      		ldi r25,hi8(receiveBuffer)
+  33 0012 0E94 0000 		call copyReceivedBytesToBuffer
+  34               	.LM5:
+  35 0016 8091 0000 		lds r24,receiveBuffer
+  36 001a 8133      		cpi r24,lo8(49)
+  37 001c 01F4      		brne .L2
+  38               	.LM6:
+  39 001e 8AB5      		in r24,74-32
+  40 0020 9BB5      		in r25,(74)+1-32
+  41 0022 0197      		sbiw r24,1
+  42 0024 9BBD      		out (74)+1-32,r25
+  43 0026 8ABD      		out 74-32,r24
+  44               	.LM7:
+  45 0028 8AB5      		in r24,74-32
+  46 002a 9BB5      		in r25,(74)+1-32
+  47 002c 0197      		sbiw r24,1
+  48 002e 9BBD      		out (74)+1-32,r25
+  49 0030 8ABD      		out 74-32,r24
+  50               	.LM8:
+  51 0032 8AB5      		in r24,74-32
+  52 0034 9BB5      		in r25,(74)+1-32
+  53 0036 0197      		sbiw r24,1
+  54 0038 9BBD      		out (74)+1-32,r25
+  55 003a 8ABD      		out 74-32,r24
+  56               	.LM9:
+  57 003c 8AB5      		in r24,74-32
+  58 003e 9BB5      		in r25,(74)+1-32
+  59 0040 0197      		sbiw r24,1
+  60 0042 9BBD      		out (74)+1-32,r25
+  61 0044 8ABD      		out 74-32,r24
+  62               	.LM10:
+  63 0046 80E0      		ldi r24,lo8(__c.1762)
+  64 0048 90E0      		ldi r25,hi8(__c.1762)
+  65 004a 0E94 0000 		call writeNStringP
+  66               	.L2:
+  67               	.LM11:
+  68 004e 8091 0000 		lds r24,receiveBuffer
+  69 0052 8233      		cpi r24,lo8(50)
+  70 0054 01F4      		brne .L3
+  71               	.LM12:
+  72 0056 8AB5      		in r24,74-32
+  73 0058 9BB5      		in r25,(74)+1-32
+  74 005a 0196      		adiw r24,1
+  75 005c 9BBD      		out (74)+1-32,r25
+  76 005e 8ABD      		out 74-32,r24
+  77               	.LM13:
+  78 0060 8AB5      		in r24,74-32
+  79 0062 9BB5      		in r25,(74)+1-32
+  80 0064 0196      		adiw r24,1
+  81 0066 9BBD      		out (74)+1-32,r25
+  82 0068 8ABD      		out 74-32,r24
+  83               	.LM14:
+  84 006a 8AB5      		in r24,74-32
+  85 006c 9BB5      		in r25,(74)+1-32
+  86 006e 0196      		adiw r24,1
+  87 0070 9BBD      		out (74)+1-32,r25
+  88 0072 8ABD      		out 74-32,r24
+  89               	.LM15:
+  90 0074 8AB5      		in r24,74-32
+  91 0076 9BB5      		in r25,(74)+1-32
+  92 0078 0196      		adiw r24,1
+  93 007a 9BBD      		out (74)+1-32,r25
+  94 007c 8ABD      		out 74-32,r24
+  95               	.LM16:
+  96 007e 80E0      		ldi r24,lo8(__c.1764)
+  97 0080 90E0      		ldi r25,hi8(__c.1764)
+  98 0082 0E94 0000 		call writeNStringP
+  99               	.L3:
+ 100               	.LM17:
+ 101 0086 8091 0000 		lds r24,receiveBuffer
+ 102 008a 8333      		cpi r24,lo8(51)
+ 103 008c 01F4      		brne .L4
+ 104               	.LM18:
+ 105 008e 88B5      		in r24,72-32
+ 106 0090 99B5      		in r25,(72)+1-32
+ 107 0092 0197      		sbiw r24,1
+ 108 0094 99BD      		out (72)+1-32,r25
+ 109 0096 88BD      		out 72-32,r24
+ 110               	.LM19:
+ 111 0098 88B5      		in r24,72-32
+ 112 009a 99B5      		in r25,(72)+1-32
+ 113 009c 0197      		sbiw r24,1
+ 114 009e 99BD      		out (72)+1-32,r25
+ 115 00a0 88BD      		out 72-32,r24
+ 116               	.LM20:
+ 117 00a2 88B5      		in r24,72-32
+ 118 00a4 99B5      		in r25,(72)+1-32
+ 119 00a6 0197      		sbiw r24,1
+ 120 00a8 99BD      		out (72)+1-32,r25
+ 121 00aa 88BD      		out 72-32,r24
+ 122               	.LM21:
+ 123 00ac 88B5      		in r24,72-32
+ 124 00ae 99B5      		in r25,(72)+1-32
+ 125 00b0 0197      		sbiw r24,1
+ 126 00b2 99BD      		out (72)+1-32,r25
+ 127 00b4 88BD      		out 72-32,r24
+ 128               	.LM22:
+ 129 00b6 80E0      		ldi r24,lo8(__c.1766)
+ 130 00b8 90E0      		ldi r25,hi8(__c.1766)
+ 131 00ba 0E94 0000 		call writeNStringP
+ 132               	.L4:
+ 133               	.LM23:
+ 134 00be 8091 0000 		lds r24,receiveBuffer
+ 135 00c2 8433      		cpi r24,lo8(52)
+ 136 00c4 01F4      		brne .L5
+ 137               	.LM24:
+ 138 00c6 88B5      		in r24,72-32
+ 139 00c8 99B5      		in r25,(72)+1-32
+ 140 00ca 0196      		adiw r24,1
+ 141 00cc 99BD      		out (72)+1-32,r25
+ 142 00ce 88BD      		out 72-32,r24
+ 143               	.LM25:
+ 144 00d0 88B5      		in r24,72-32
+ 145 00d2 99B5      		in r25,(72)+1-32
+ 146 00d4 0196      		adiw r24,1
+ 147 00d6 99BD      		out (72)+1-32,r25
+ 148 00d8 88BD      		out 72-32,r24
+ 149               	.LM26:
+ 150 00da 88B5      		in r24,72-32
+ 151 00dc 99B5      		in r25,(72)+1-32
+ 152 00de 0196      		adiw r24,1
+ 153 00e0 99BD      		out (72)+1-32,r25
+ 154 00e2 88BD      		out 72-32,r24
+ 155               	.LM27:
+ 156 00e4 88B5      		in r24,72-32
+ 157 00e6 99B5      		in r25,(72)+1-32
+ 158 00e8 0196      		adiw r24,1
+ 159 00ea 99BD      		out (72)+1-32,r25
+ 160 00ec 88BD      		out 72-32,r24
+ 161               	.LM28:
+ 162 00ee 80E0      		ldi r24,lo8(__c.1768)
+ 163 00f0 90E0      		ldi r25,hi8(__c.1768)
+ 164 00f2 0E94 0000 		call writeNStringP
+ 165               	.L5:
+ 166               	.LM29:
+ 167 00f6 8091 0000 		lds r24,receiveBuffer
+ 168 00fa 8533      		cpi r24,lo8(53)
+ 169 00fc 01F4      		brne .L6
+ 170               	.LM30:
+ 171 00fe 8091 7800 		lds r24,120
+ 172 0102 9091 7900 		lds r25,(120)+1
+ 173 0106 0197      		sbiw r24,1
+ 174 0108 9093 7900 		sts (120)+1,r25
+ 175 010c 8093 7800 		sts 120,r24
+ 176               	.LM31:
+ 177 0110 8091 7800 		lds r24,120
+ 178 0114 9091 7900 		lds r25,(120)+1
+ 179 0118 0197      		sbiw r24,1
+ 180 011a 9093 7900 		sts (120)+1,r25
+ 181 011e 8093 7800 		sts 120,r24
+ 182               	.LM32:
+ 183 0122 8091 7800 		lds r24,120
+ 184 0126 9091 7900 		lds r25,(120)+1
+ 185 012a 0197      		sbiw r24,1
+ 186 012c 9093 7900 		sts (120)+1,r25
+ 187 0130 8093 7800 		sts 120,r24
+ 188               	.LM33:
+ 189 0134 8091 7800 		lds r24,120
+ 190 0138 9091 7900 		lds r25,(120)+1
+ 191 013c 0197      		sbiw r24,1
+ 192 013e 9093 7900 		sts (120)+1,r25
+ 193 0142 8093 7800 		sts 120,r24
+ 194               	.LM34:
+ 195 0146 80E0      		ldi r24,lo8(__c.1770)
+ 196 0148 90E0      		ldi r25,hi8(__c.1770)
+ 197 014a 0E94 0000 		call writeNStringP
+ 198               	.L6:
+ 199               	.LM35:
+ 200 014e 8091 0000 		lds r24,receiveBuffer
+ 201 0152 8633      		cpi r24,lo8(54)
+ 202 0154 01F4      		brne .L7
+ 203               	.LM36:
+ 204 0156 8091 7800 		lds r24,120
+ 205 015a 9091 7900 		lds r25,(120)+1
+ 206 015e 0196      		adiw r24,1
+ 207 0160 9093 7900 		sts (120)+1,r25
+ 208 0164 8093 7800 		sts 120,r24
+ 209               	.LM37:
+ 210 0168 8091 7800 		lds r24,120
+ 211 016c 9091 7900 		lds r25,(120)+1
+ 212 0170 0196      		adiw r24,1
+ 213 0172 9093 7900 		sts (120)+1,r25
+ 214 0176 8093 7800 		sts 120,r24
+ 215               	.LM38:
+ 216 017a 8091 7800 		lds r24,120
+ 217 017e 9091 7900 		lds r25,(120)+1
+ 218 0182 0196      		adiw r24,1
+ 219 0184 9093 7900 		sts (120)+1,r25
+ 220 0188 8093 7800 		sts 120,r24
+ 221               	.LM39:
+ 222 018c 8091 7800 		lds r24,120
+ 223 0190 9091 7900 		lds r25,(120)+1
+ 224 0194 0196      		adiw r24,1
+ 225 0196 9093 7900 		sts (120)+1,r25
+ 226 019a 8093 7800 		sts 120,r24
+ 227               	.LM40:
+ 228 019e 80E0      		ldi r24,lo8(__c.1772)
+ 229 01a0 90E0      		ldi r25,hi8(__c.1772)
+ 230 01a2 0E94 0000 		call writeNStringP
+ 231               	.L7:
+ 232               	.LM41:
+ 233 01a6 8091 0000 		lds r24,receiveBuffer
+ 234 01aa 8733      		cpi r24,lo8(55)
+ 235 01ac 01F4      		brne .L8
+ 236               	.LM42:
+ 237 01ae 8091 8600 		lds r24,134
+ 238 01b2 9091 8700 		lds r25,(134)+1
+ 239 01b6 0197      		sbiw r24,1
+ 240 01b8 9093 8700 		sts (134)+1,r25
+ 241 01bc 8093 8600 		sts 134,r24
+ 242               	.LM43:
+ 243 01c0 8091 8600 		lds r24,134
+ 244 01c4 9091 8700 		lds r25,(134)+1
+ 245 01c8 0197      		sbiw r24,1
+ 246 01ca 9093 8700 		sts (134)+1,r25
+ 247 01ce 8093 8600 		sts 134,r24
+ 248               	.LM44:
+ 249 01d2 8091 8600 		lds r24,134
+ 250 01d6 9091 8700 		lds r25,(134)+1
+ 251 01da 0197      		sbiw r24,1
+ 252 01dc 9093 8700 		sts (134)+1,r25
+ 253 01e0 8093 8600 		sts 134,r24
+ 254               	.LM45:
+ 255 01e4 8091 8600 		lds r24,134
+ 256 01e8 9091 8700 		lds r25,(134)+1
+ 257 01ec 0197      		sbiw r24,1
+ 258 01ee 9093 8700 		sts (134)+1,r25
+ 259 01f2 8093 8600 		sts 134,r24
+ 260               	.LM46:
+ 261 01f6 80E0      		ldi r24,lo8(__c.1774)
+ 262 01f8 90E0      		ldi r25,hi8(__c.1774)
+ 263 01fa 0E94 0000 		call writeNStringP
+ 264               	.L8:
+ 265               	.LM47:
+ 266 01fe 8091 0000 		lds r24,receiveBuffer
+ 267 0202 8833      		cpi r24,lo8(56)
+ 268 0204 01F4      		brne .L9
+ 269               	.LM48:
+ 270 0206 8091 8600 		lds r24,134
+ 271 020a 9091 8700 		lds r25,(134)+1
+ 272 020e 0196      		adiw r24,1
+ 273 0210 9093 8700 		sts (134)+1,r25
+ 274 0214 8093 8600 		sts 134,r24
+ 275               	.LM49:
+ 276 0218 8091 8600 		lds r24,134
+ 277 021c 9091 8700 		lds r25,(134)+1
+ 278 0220 0196      		adiw r24,1
+ 279 0222 9093 8700 		sts (134)+1,r25
+ 280 0226 8093 8600 		sts 134,r24
+ 281               	.LM50:
+ 282 022a 8091 8600 		lds r24,134
+ 283 022e 9091 8700 		lds r25,(134)+1
+ 284 0232 0196      		adiw r24,1
+ 285 0234 9093 8700 		sts (134)+1,r25
+ 286 0238 8093 8600 		sts 134,r24
+ 287               	.LM51:
+ 288 023c 8091 8600 		lds r24,134
+ 289 0240 9091 8700 		lds r25,(134)+1
+ 290 0244 0196      		adiw r24,1
+ 291 0246 9093 8700 		sts (134)+1,r25
+ 292 024a 8093 8600 		sts 134,r24
+ 293               	.LM52:
+ 294 024e 80E0      		ldi r24,lo8(__c.1776)
+ 295 0250 90E0      		ldi r25,hi8(__c.1776)
+ 296 0252 0E94 0000 		call writeNStringP
+ 297               	.L9:
+ 298               	.LM53:
+ 299 0256 8091 0000 		lds r24,receiveBuffer
+ 300 025a 8933      		cpi r24,lo8(57)
+ 301 025c 01F4      		brne .L10
+ 302               	.LM54:
+ 303 025e 8091 8400 		lds r24,132
+ 304 0262 9091 8500 		lds r25,(132)+1
+ 305 0266 0197      		sbiw r24,1
+ 306 0268 9093 8500 		sts (132)+1,r25
+ 307 026c 8093 8400 		sts 132,r24
+ 308               	.LM55:
+ 309 0270 8091 8400 		lds r24,132
+ 310 0274 9091 8500 		lds r25,(132)+1
+ 311 0278 0197      		sbiw r24,1
+ 312 027a 9093 8500 		sts (132)+1,r25
+ 313 027e 8093 8400 		sts 132,r24
+ 314               	.LM56:
+ 315 0282 8091 8400 		lds r24,132
+ 316 0286 9091 8500 		lds r25,(132)+1
+ 317 028a 0197      		sbiw r24,1
+ 318 028c 9093 8500 		sts (132)+1,r25
+ 319 0290 8093 8400 		sts 132,r24
+ 320               	.LM57:
+ 321 0294 8091 8400 		lds r24,132
+ 322 0298 9091 8500 		lds r25,(132)+1
+ 323 029c 0197      		sbiw r24,1
+ 324 029e 9093 8500 		sts (132)+1,r25
+ 325 02a2 8093 8400 		sts 132,r24
+ 326               	.LM58:
+ 327 02a6 80E0      		ldi r24,lo8(__c.1778)
+ 328 02a8 90E0      		ldi r25,hi8(__c.1778)
+ 329 02aa 0E94 0000 		call writeNStringP
+ 330               	.L10:
+ 331               	.LM59:
+ 332 02ae 8091 0000 		lds r24,receiveBuffer
+ 333 02b2 8136      		cpi r24,lo8(97)
+ 334 02b4 01F4      		brne .L11
+ 335               	.LM60:
+ 336 02b6 8091 8400 		lds r24,132
+ 337 02ba 9091 8500 		lds r25,(132)+1
+ 338 02be 0196      		adiw r24,1
+ 339 02c0 9093 8500 		sts (132)+1,r25
+ 340 02c4 8093 8400 		sts 132,r24
+ 341               	.LM61:
+ 342 02c8 8091 8400 		lds r24,132
+ 343 02cc 9091 8500 		lds r25,(132)+1
+ 344 02d0 0196      		adiw r24,1
+ 345 02d2 9093 8500 		sts (132)+1,r25
+ 346 02d6 8093 8400 		sts 132,r24
+ 347               	.LM62:
+ 348 02da 8091 8400 		lds r24,132
+ 349 02de 9091 8500 		lds r25,(132)+1
+ 350 02e2 0196      		adiw r24,1
+ 351 02e4 9093 8500 		sts (132)+1,r25
+ 352 02e8 8093 8400 		sts 132,r24
+ 353               	.LM63:
+ 354 02ec 8091 8400 		lds r24,132
+ 355 02f0 9091 8500 		lds r25,(132)+1
+ 356 02f4 0196      		adiw r24,1
+ 357 02f6 9093 8500 		sts (132)+1,r25
+ 358 02fa 8093 8400 		sts 132,r24
+ 359               	.LM64:
+ 360 02fe 80E0      		ldi r24,lo8(__c.1780)
+ 361 0300 90E0      		ldi r25,hi8(__c.1780)
+ 362 0302 0E94 0000 		call writeNStringP
+ 363               	.L11:
+ 364               	.LM65:
+ 365 0306 8091 0000 		lds r24,receiveBuffer
+ 366 030a 8236      		cpi r24,lo8(98)
+ 367 030c 01F4      		brne .L12
+ 368               	.LM66:
+ 369 030e 8091 8200 		lds r24,130
+ 370 0312 9091 8300 		lds r25,(130)+1
+ 371 0316 0197      		sbiw r24,1
+ 372 0318 9093 8300 		sts (130)+1,r25
+ 373 031c 8093 8200 		sts 130,r24
+ 374               	.LM67:
+ 375 0320 8091 8200 		lds r24,130
+ 376 0324 9091 8300 		lds r25,(130)+1
+ 377 0328 0197      		sbiw r24,1
+ 378 032a 9093 8300 		sts (130)+1,r25
+ 379 032e 8093 8200 		sts 130,r24
+ 380               	.LM68:
+ 381 0332 8091 8200 		lds r24,130
+ 382 0336 9091 8300 		lds r25,(130)+1
+ 383 033a 0197      		sbiw r24,1
+ 384 033c 9093 8300 		sts (130)+1,r25
+ 385 0340 8093 8200 		sts 130,r24
+ 386               	.LM69:
+ 387 0344 8091 8200 		lds r24,130
+ 388 0348 9091 8300 		lds r25,(130)+1
+ 389 034c 0197      		sbiw r24,1
+ 390 034e 9093 8300 		sts (130)+1,r25
+ 391 0352 8093 8200 		sts 130,r24
+ 392               	.LM70:
+ 393 0356 80E0      		ldi r24,lo8(__c.1782)
+ 394 0358 90E0      		ldi r25,hi8(__c.1782)
+ 395 035a 0E94 0000 		call writeNStringP
+ 396               	.L12:
+ 397               	.LM71:
+ 398 035e 8091 0000 		lds r24,receiveBuffer
+ 399 0362 8336      		cpi r24,lo8(99)
+ 400 0364 01F4      		brne .L14
+ 401               	.LM72:
+ 402 0366 8091 8200 		lds r24,130
+ 403 036a 9091 8300 		lds r25,(130)+1
+ 404 036e 0196      		adiw r24,1
+ 405 0370 9093 8300 		sts (130)+1,r25
+ 406 0374 8093 8200 		sts 130,r24
+ 407               	.LM73:
+ 408 0378 8091 8200 		lds r24,130
+ 409 037c 9091 8300 		lds r25,(130)+1
+ 410 0380 0196      		adiw r24,1
+ 411 0382 9093 8300 		sts (130)+1,r25
+ 412 0386 8093 8200 		sts 130,r24
+ 413               	.LM74:
+ 414 038a 8091 8200 		lds r24,130
+ 415 038e 9091 8300 		lds r25,(130)+1
+ 416 0392 0196      		adiw r24,1
+ 417 0394 9093 8300 		sts (130)+1,r25
+ 418 0398 8093 8200 		sts 130,r24
+ 419               	.LM75:
+ 420 039c 8091 8200 		lds r24,130
+ 421 03a0 9091 8300 		lds r25,(130)+1
+ 422 03a4 0196      		adiw r24,1
+ 423 03a6 9093 8300 		sts (130)+1,r25
+ 424 03aa 8093 8200 		sts 130,r24
+ 425               	.LM76:
+ 426 03ae 80E0      		ldi r24,lo8(__c.1784)
+ 427 03b0 90E0      		ldi r25,hi8(__c.1784)
+ 428 03b2 0E94 0000 		call writeNStringP
+ 429               	.L14:
+ 430 03b6 0895      		ret
+ 431               	.LFE7:
+ 433               	.global	Leds_Beeper
+ 435               	Leds_Beeper:
+ 436               	.LFB6:
+ 437               	.LM77:
+ 438               	/* prologue: function */
+ 439               	/* frame size = 0 */
+ 440               	.LM78:
+ 441 03b8 86E9      		ldi r24,lo8(150)
+ 442 03ba 90E0      		ldi r25,hi8(150)
+ 443 03bc 0E94 0000 		call changeBeepsound
+ 444               	.LM79:
+ 445 03c0 0E94 0000 		call setBeepsound
+ 446               	.LM80:
+ 447 03c4 0E94 0000 		call PowerLEDred
+ 448               	.LM81:
+ 449 03c8 84EF      		ldi r24,lo8(500)
+ 450 03ca 91E0      		ldi r25,hi8(500)
+ 451 03cc 0E94 0000 		call mSleep
+ 452               	.LM82:
+ 453 03d0 88EC      		ldi r24,lo8(200)
+ 454 03d2 90E0      		ldi r25,hi8(200)
+ 455 03d4 0E94 0000 		call changeBeepsound
+ 456               	.LM83:
+ 457 03d8 0E94 0000 		call PowerLEDgreen
+ 458               	.LM84:
+ 459 03dc 84EF      		ldi r24,lo8(500)
+ 460 03de 91E0      		ldi r25,hi8(500)
+ 461 03e0 0E94 0000 		call mSleep
+ 462               	.LM85:
+ 463 03e4 8FEF      		ldi r24,lo8(255)
+ 464 03e6 90E0      		ldi r25,hi8(255)
+ 465 03e8 0E94 0000 		call changeBeepsound
+ 466               	.LM86:
+ 467 03ec 0E94 0000 		call PowerLEDorange
+ 468               	.LM87:
+ 469 03f0 84EF      		ldi r24,lo8(500)
+ 470 03f2 91E0      		ldi r25,hi8(500)
+ 471 03f4 0E94 0000 		call mSleep
+ 472               	.LM88:
+ 473 03f8 0E94 0000 		call PowerLEDoff
+ 474               	.LM89:
+ 475 03fc 0E94 0000 		call clearBeepsound
+ 476               	/* epilogue start */
+ 477               	.LM90:
+ 478 0400 0895      		ret
+ 479               	.LFE6:
+ 481               	.global	main
+ 483               	main:
+ 484               	.LFB8:
+ 485               	.LM91:
+ 486               	/* prologue: function */
+ 487               	/* frame size = 0 */
+ 488               	.LM92:
+ 489 0402 0E94 0000 		call initRobotBase
+ 490               	.LM93:
+ 491 0406 0E94 0000 		call Servo_Power_And_Start
+ 492               	.LM94:
+ 493 040a 80E2      		ldi r24,lo8(800)
+ 494 040c 93E0      		ldi r25,hi8(800)
+ 495 040e 0E94 0000 		call mSleep
+ 496               	.LM95:
+ 497 0412 0E94 0000 		call Leds_Beeper
+ 498               	.LM96:
+ 499 0416 81E0      		ldi r24,lo8(1)
+ 500 0418 90E0      		ldi r25,hi8(1)
+ 501 041a 9093 0000 		sts (speed)+1,r25
+ 502 041e 8093 0000 		sts speed,r24
+ 503               	.L18:
+ 504               	.LM97:
+ 505 0422 80E0      		ldi r24,lo8(__c.1892)
+ 506 0424 90E0      		ldi r25,hi8(__c.1892)
+ 507 0426 0E94 0000 		call writeNStringP
+ 508               	.LM98:
+ 509 042a 0E94 0000 		call askAQuestion
+ 510               	.LM99:
+ 511 042e 80E0      		ldi r24,lo8(__c.1894)
+ 512 0430 90E0      		ldi r25,hi8(__c.1894)
+ 513 0432 0E94 0000 		call writeNStringP
+ 514 0436 00C0      		rjmp .L18
+ 515               	.LFE8:
+ 517               		.section	.progmem.data,"a",@progbits
+ 520               	__c.1894:
+ 521 0000 436F 6D6D 		.string	"Commande bien recu\n"
+ 521      616E 6465 
+ 521      2062 6965 
+ 521      6E20 7265 
+ 521      6375 0A00 
+ 524               	__c.1892:
+ 525 0014 456E 7472 		.string	"Entrer commande\n"
+ 525      6572 2063 
+ 525      6F6D 6D61 
+ 525      6E64 650A 
+ 525      00
+ 528               	__c.1784:
+ 529 0025 7365 7276 		.string	"servo 6 se tourne \340 gauche\n"
+ 529      6F20 3620 
+ 529      7365 2074 
+ 529      6F75 726E 
+ 529      6520 E020 
+ 532               	__c.1782:
+ 533 0041 7365 7276 		.string	"servo 6 se tourne \340 droite\n"
+ 533      6F20 3620 
+ 533      7365 2074 
+ 533      6F75 726E 
+ 533      6520 E020 
+ 536               	__c.1780:
+ 537 005d 7365 7276 		.string	"servo 5 s'incline vers le bas\n"
+ 537      6F20 3520 
+ 537      7327 696E 
+ 537      636C 696E 
+ 537      6520 7665 
+ 540               	__c.1778:
+ 541 007c 7365 7276 		.string	"servo 5 s'incline vers le haut\n"
+ 541      6F20 3520 
+ 541      7327 696E 
+ 541      636C 696E 
+ 541      6520 7665 
+ 544               	__c.1776:
+ 545 009c 7365 7276 		.string	"servo 4 s'incline vers le bas\n"
+ 545      6F20 3420 
+ 545      7327 696E 
+ 545      636C 696E 
+ 545      6520 7665 
+ 548               	__c.1774:
+ 549 00bb 7365 7276 		.string	"servo 4 s'incline vers le haut\n"
+ 549      6F20 3420 
+ 549      7327 696E 
+ 549      636C 696E 
+ 549      6520 7665 
+ 552               	__c.1772:
+ 553 00db 7365 7276 		.string	"servo 3 s'incline vers le haut \n"
+ 553      6F20 3320 
+ 553      7327 696E 
+ 553      636C 696E 
+ 553      6520 7665 
+ 556               	__c.1770:
+ 557 00fc 7365 7276 		.string	"servo 3 s'incline vers le bas \n"
+ 557      6F20 3320 
+ 557      7327 696E 
+ 557      636C 696E 
+ 557      6520 7665 
+ 560               	__c.1768:
+ 561 011c 7365 7276 		.string	"servo 2 se tourne \340 gauche\n"
+ 561      6F20 3220 
+ 561      7365 2074 
+ 561      6F75 726E 
+ 561      6520 E020 
+ 564               	__c.1766:
+ 565 0138 7365 7276 		.string	"servo 2 se tourne \340 droite \n"
+ 565      6F20 3220 
+ 565      7365 2074 
+ 565      6F75 726E 
+ 565      6520 E020 
+ 568               	__c.1764:
+ 569 0155 4C61 2070 		.string	"La pince s'ouvre \n"
+ 569      696E 6365 
+ 569      2073 276F 
+ 569      7576 7265 
+ 569      200A 00
+ 572               	__c.1762:
+ 573 0168 4C61 2070 		.string	"La pince se ferme \n"
+ 573      696E 6365 
+ 573      2073 6520 
+ 573      6665 726D 
+ 573      6520 0A00 
+ 574               		.comm Current_1,2,1
+ 575               		.comm Current_2,2,1
+ 576               		.comm Current_3,2,1
+ 577               		.comm Current_4,2,1
+ 578               		.comm Current_5,2,1
+ 579               		.comm Current_6,2,1
+ 580               		.comm Start_Position,14,1
+ 581               		.comm speed,2,1
+ 582               		.comm bytesToReceive,1,1
+ 583               		.comm receiveBuffer,3,1
+ 624               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 RobotArm_Uart_02.c
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:2      *ABS*:0000003f __SREG__
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:3      *ABS*:0000003e __SP_H__
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:4      *ABS*:0000003d __SP_L__
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:5      *ABS*:00000034 __CCP__
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:18     .text:00000000 askAQuestion
+                            *COM*:00000003 receiveBuffer
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:572    .progmem.data:00000168 __c.1762
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:568    .progmem.data:00000155 __c.1764
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:564    .progmem.data:00000138 __c.1766
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:560    .progmem.data:0000011c __c.1768
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:556    .progmem.data:000000fc __c.1770
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:552    .progmem.data:000000db __c.1772
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:548    .progmem.data:000000bb __c.1774
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:544    .progmem.data:0000009c __c.1776
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:540    .progmem.data:0000007c __c.1778
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:536    .progmem.data:0000005d __c.1780
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:532    .progmem.data:00000041 __c.1782
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:528    .progmem.data:00000025 __c.1784
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:435    .text:000003b8 Leds_Beeper
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:483    .text:00000402 main
+                            *COM*:00000002 speed
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:524    .progmem.data:00000014 __c.1892
+C:\Users\LILA\AppData\Local\Temp/cc16fmvf.s:520    .progmem.data:00000000 __c.1894
+                            *COM*:00000002 Current_1
+                            *COM*:00000002 Current_2
+                            *COM*:00000002 Current_3
+                            *COM*:00000002 Current_4
+                            *COM*:00000002 Current_5
+                            *COM*:00000002 Current_6
+                            *COM*:0000000e Start_Position
+                            *COM*:00000001 bytesToReceive
+
+UNDEFINED SYMBOLS
+receiveBytes
+mSleep
+copyReceivedBytesToBuffer
+writeNStringP
+changeBeepsound
+setBeepsound
+PowerLEDred
+PowerLEDgreen
+PowerLEDorange
+PowerLEDoff
+clearBeepsound
+initRobotBase
+Servo_Power_And_Start
+__do_clear_bss
