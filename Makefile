@@ -70,7 +70,7 @@ FORMAT = ihex
 
 
 # Target file name (without extension).
-TARGET = RobotArm_Uart_02
+TARGET = RobotArm_Key_Board
 
 ###############################################################################
 # Specify relative path to RobotArm library files here.
